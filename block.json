@@ -1,0 +1,60 @@
+{
+    "apiVersion": 2,
+    "name": "array-block/arrayforms",
+    "title": "BuildForms",
+    "category": "widgets",
+    "description": "Embed an Array Form",
+    "supports": {
+        "html": false
+    },
+    "attributes": {
+        "isPreview": {
+            "type": "boolean",
+            "source": "attribute",
+            "selector": "iframe",
+            "default": false,
+            "attribute": "disabled"
+        },
+        "formEmbedId": {
+            "type": "string",
+            "source": "attribute",
+            "selector": "iframe",
+            "attribute": "data-form-id",
+            "default": ""
+        },
+        "formEmbedUrl": {
+            "type": "string",
+            "source": "attribute",
+            "selector": "iframe",
+            "attribute": "src",
+            "default": "about:blank"
+        },
+        "formWidth": {
+            "type": "string",
+            "source": "attribute",
+            "selector": "iframe",
+            "attribute": "width",
+            "default": "100%"
+        },
+        "formHeight": {
+            "type": "string",
+            "source": "attribute",
+            "selector": "iframe",
+            "attribute": "height",
+            "default": "356px"
+        }
+    },
+    "example": {
+        "attributes": {
+            "isPreview": true,
+            "formWidth" :"400px",
+            "formHeight" :"600px",
+            "formEmbedId": "23037",
+            "formEmbedUrl": "https://www.buildarray.com/shared-forms/market/23037?actkn=iCB8fV"
+        }
+    },
+    "textdomain": "arrayforms",
+    "editorScript": "file:./build/index.js",
+    "editorStyle": "file:./build/index.css",
+    "style": "file:./build/style-index.css"
+}

@@ -1,0 +1,112 @@
+.toplevel_page_arrayforms #wpcontent {
+    padding-left: 0 !important;
+}
+
+.toplevel_page_arrayforms ul#adminmenu a.wp-has-current-submenu:after,
+.toplevel_page_arrayforms ul#adminmenu > li.current > a.current:after {
+    display: none;
+}
+
+#wpbody-content {
+    padding-bottom: 0;
+}
+
+#screen-meta {
+    display: none;
+}
+
+#wpfooter {
+    display: none;
+}
+
+#array-admin-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    display: block;
+    width: 100%;
+    min-height: calc(100vh - 32px);
+    transition: opacity 0.4s;
+}
+
+#arrayforms-logged-in-check {
+    position: absolute;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
+#array-admin-frame.loaded {
+    z-index: 2;
+    opacity: 1;
+}
+
+.array-loading-spinner-container {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 32px);
+    background-color: #f7f9f9;
+}
+
+.array-loading-spinner {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.array-loading-spinner div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    margin: 6px;
+    border: 6px solid #0d3bc9;
+    border-radius: 50%;
+    animation: array-lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #0d3bc9 transparent transparent transparent;
+}
+
+.array-loading-spinner div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.array-loading-spinner div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.array-loading-spinner div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+.array-forms-icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes array-lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 782px) {
+    #array-admin-frame {
+        min-height: calc(100vh - 46px);
+    }
+    .array-loading-spinner-container {
+        height: calc(100vh - 46px);
+    }
+}
